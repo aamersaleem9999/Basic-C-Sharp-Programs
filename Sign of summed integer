@@ -1,0 +1,39 @@
+/*Aamer Saleem Mohammed*/
+
+using System;
+
+namespace ConsoleApp12
+{
+    class Sign_of_summed_integer
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+
+                Console.WriteLine("Please input 3 numbers");
+                int[] num = new int[3];//Creating an array of three integer
+                                       //This array is used to simplify coding of 3 integer variables and uses just one variable name
+                                       //with which we can access 3 inetger value with its index value
+
+                int sum = 0;
+
+                for (int i = 0; i < 3; i++)//Pulls integers until array values are exhausted and sums them up
+                {
+                    num[i] = Convert.ToInt32(Console.ReadLine());
+                    sum = sum + num[i];
+                }
+
+                if (sum < 0)
+                    Console.WriteLine("The Sign summed number is -");
+                else                                                    //Output
+                    Console.WriteLine("The Sign summned number is +");
+                Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                //
+            }
+        }
+    }
+}
