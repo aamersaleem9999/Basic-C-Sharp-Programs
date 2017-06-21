@@ -1,0 +1,35 @@
+/*Aamer Saleem Mohammed*/
+using System;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter number of elements: ");
+            int ele = Convert.ToInt16(Console.ReadLine());//Input number of elements
+
+            Console.WriteLine("Enter the "+ele+" numbers to Sort: ");
+
+            int[] num = new int[ele];//Creating an array
+
+            for (int i = 0; i < ele; i++)   //Getting input numbers
+            {
+                num[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(num);//Use in-built to sort
+                            //Better to use a custom made code for more understanding
+
+            Console.WriteLine("Sorted Elements");
+            for (int i = 0; i < ele; i++)//Printing the elements
+            {
+                Console.WriteLine(  num[i]);
+            }
+            Console.ReadLine();
+        } 
+           
+        
+    }
+}
