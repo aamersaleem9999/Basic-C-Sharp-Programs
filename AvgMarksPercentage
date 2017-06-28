@@ -1,0 +1,41 @@
+/*Aamer Saleem Mohammed*/
+using System;
+
+namespace AvgMarksPercentage
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double[] marks =  { 80, 77, 88, 95, 68 };//Hardcoding students marks
+            double avg = 0;
+            double temp = 0;
+            char grade=' ';
+            double[] temp1 = new double[marks.Length];
+
+            //Sum of all marks
+            for (int i = 0; i <marks.Length; i++)
+            {
+                temp = temp + marks[i];
+            }
+
+            //Average of students marks
+            avg = temp / marks.Length;
+
+            for (int i = 0; i <marks.Length; i++)
+            {
+                temp1[i] = (marks[i] / avg) * 100;
+
+                //The symbol "var=condi?...:..." is Operator form of If-Else Statement
+                grade=  (temp1[i] <60)?  grade = 'F':
+                        (temp1[i] < 70) ? grade = 'D' :
+                        (temp1[i] < 80) ? grade = 'C' :     //Determinig student grade with respect to average marks
+                        (temp1[i] < 90) ? grade = 'B' :'A';
+                
+                Console.WriteLine("Grade of Student "+i+" is "+grade+" and percentage is "+temp1[i]);
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
