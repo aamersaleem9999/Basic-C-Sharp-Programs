@@ -1,0 +1,34 @@
+/*Aamer Saleem Mohammed*/
+using System;
+
+namespace FizzBuzz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            for (int i = 1; i < 101; i++)
+            {
+                //If-else statement arrangement should be noticed
+                //Alteration in the statements messes up logic
+
+                if (i % 3 == 0 && i % 5 == 0) //Multiples of 3 and 5 prints FizzBuzz
+                {
+                    Console.WriteLine("FizzBuzz at " + i + "\n");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz at "+i+"\n");//Multiples of 3 prints Fizz
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz at " + i + "\n");//Multiples of 5 prints Buzz
+                }
+
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
